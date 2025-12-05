@@ -21,6 +21,7 @@ def calculate_grade(percent):
     else:
         return "F", 0.0
 
+def main();
 print("=== STUDENT GRADE MANAGEMENT SYSTEM ===")
 
 name = input("Enter student name: ")

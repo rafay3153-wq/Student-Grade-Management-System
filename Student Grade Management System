@@ -12,7 +12,7 @@ def get_positive_int(msg):
 def input_mark(mssg, total_marks):
     while True:
         try:
-            val = float(input(prompt))
+            val = float(input(mssg))
             if 0 <= val <= total_marks:
                 return val
             print(f"Enter a value between 0 and {total_marks}.")

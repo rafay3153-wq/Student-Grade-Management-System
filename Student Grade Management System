@@ -12,8 +12,6 @@ total_gpa = 0
 for i in range(1, num_subjects + 1):
     print(f"\n--- Subject {i} ---")
     sub_name = input("Subject name: ")
-    max_marks = get_positive_int("Total marks: ")
-    obtained = get_marks("Obtained marks: ", max_marks)
 
-    percent = (obtained / max_marks) * 100
-   
+
+

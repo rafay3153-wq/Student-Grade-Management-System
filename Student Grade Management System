@@ -31,8 +31,8 @@ def calculate_grade(percent):
     else:
         return "F", 0.0
 
-def main();
-print("=== STUDENT GRADE MANAGEMENT SYSTEM ===")
+def main():
+    print("=== STUDENT GRADE MANAGEMENT SYSTEM ===")
 
 name = input("Enter student name: ")
 roll_no = input("Enter roll number: ")
@@ -48,14 +48,14 @@ gpas = []
 for i in range(num_subjects):
     print("\nSubject", i+1)
     sub_name = input("Subject name: ")
-    subject.append(sub_name)
+    subjects.append(sub_name)
     total = get_positive_int("Total marks: ")
     total_marks.append(total)
     obtained = get_marks("Obtained marks: ", total)
     obtained_marks.append(obtained)
     percent = (obtained/total) * 100
     percentages.append(percent)
-    grade, gpa = Calculate_grade(percent)
+    grade, gpa = calculate_grade(percent)
     grades.append(grade)
     gpas.append(gpa)
 

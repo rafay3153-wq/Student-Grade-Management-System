@@ -1,3 +1,14 @@
+def get_positive_int(msg):
+    while True:
+        try:
+            n = int(input(msg))
+            if n > 0:
+                return n
+            else:
+                print("Please enter a positive number.")
+        except ValueError:
+            print("Invalid input. Enter a number.")
+
 def grade_scale(percent):
     if percent >= 85:
         return "A", 4.0

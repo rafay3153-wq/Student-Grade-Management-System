@@ -1,3 +1,15 @@
+def grade_scale(percent):
+    if percent >= 85:
+        return "A", 4.0
+    elif percent >= 70:
+        return "B", 3.0
+    elif percent >= 60:
+        return "C", 2.0
+    elif percent >= 50:
+        return "D", 1.0
+    else:
+        return "F", 0.0
+
 print("=== STUDENT GRADE MANAGEMENT SYSTEM ===")
 
 name = input("Enter student name: ")

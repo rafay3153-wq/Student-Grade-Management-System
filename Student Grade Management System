@@ -9,7 +9,7 @@ def get_positive_int(msg):
         except ValueError:
             print("Invalid input. Enter a number.")
 
-def grade_scale(percent):
+def calculate_grade(percent):
     if percent >= 85:
         return "A", 4.0
     elif percent >= 70:

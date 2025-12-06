@@ -83,7 +83,8 @@ def main():
     print("\nSubject          Total      Obtained      Percentage      Grade      GPA")
     print("===========================================================================");
     for j in range (num_subjects):
-        print("\n" + subjects[j] + "             " + str(total_marks[j]) + "          " + str(obtained_marks[j]) + "         " + str(round(percentages[j], 2)) + "         " + grades[j] + "      " + str(gpas[j]))
+       print(f"{subjects[j]:<15} {total_marks[j]:<10} {obtained_marks[j]:<12} "f"{percentages[j]:<12.2f} {grades[j]:<8} {gpas[j]:<5}")
+
     print("\n==================== OVERALL SUMMARY ====================")
     print(f"Total Obtained Marks : {total_obtained} / {total_max}")
     print(f"Overall Percentage   : {overall_percent:.2f}%")

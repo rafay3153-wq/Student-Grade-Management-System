@@ -22,11 +22,21 @@ def get_marks(mssg, total_marks):
 def calculate_grade(percent):
     if percent >= 85:
         return "A", 4.0
+    elif percent >= 80:
+        return "A-", 3.7
+    elif percent >= 75:
+        return "B+", 3.3
     elif percent >= 70:
         return "B", 3.0
+    elif percent >= 65:
+        return "B-", 2.7
     elif percent >= 60:
+        return "C+", 2.3
+    elif percent >= 55:
         return "C", 2.0
     elif percent >= 50:
+        return "C-", 1.7
+    elif percent >= 45:
         return "D", 1.0
     else:
         return "F", 0.0

@@ -45,21 +45,40 @@ def main():
     percentages = []
     grades = []
     gpas = []
+
     for i in range(num_subjects):
         print("\nSubject", i+1)
         sub_name = input("Subject name: ")
         subjects.append(sub_name)
+
         total = get_positive_int("Total marks: ")
         total_marks.append(total)
+
         obtained = get_marks("Obtained marks: ", total)
         obtained_marks.append(obtained)
+
         percent = (obtained/total) * 100
         percentages.append(percent)
+
         grade, gpa = calculate_grade(percent)
         grades.append(grade)
         gpas.append(gpa)
+
+    total_obtained = sum(obtained_marks)
+    total_max = sum(total_marks)
+    overall_percent = (total_obtained / total_max) * 100
+    overall_grade, _ = calculate_grade(overall_percent)
+    avg_gpa = sum(gpas) / num_subjects
+
     print("\nSubject          Total      Obtained      Percentage      Grade      GPA")
     print("===========================================================================");
     for j in range (num_subjects):
         print("\n" + subjects[j] + "             " + str(total_marks[j]) + "          " + str(obtained_marks[j]) + "         " + str(round(percentages[j], 2)) + "         " + grades[j] + "      " + str(gpas[j]))
+    print("\n==================== OVERALL SUMMARY ====================")
+    print(f"Total Obtained Marks : {total_obtained} / {total_max}")
+    print(f"Overall Percentage   : {overall_percent:.2f}%")
+    print(f"Overall Grade        : {overall_grade}")
+    print(f"Average GPA          : {avg_gpa:.2f}")
+    print("==========================================================")
 main()
+

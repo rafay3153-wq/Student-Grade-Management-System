@@ -32,30 +32,34 @@ def calculate_grade(percent):
         return "F", 0.0
 
 def main():
-    print("=== STUDENT GRADE MANAGEMENT SYSTEM ===")
+    print("----------> STUDENT GRADE MANAGEMENT SYSTEM <----------")
+    print("\n\n----------> SHEHRYAR KHURRAM FA25-BDS-045 <----------")
+    print("\n\n----------> MUHAMMAD RAFAY FA25-BDS-035 <----------\n\n")
+    name = input("Enter student name: ")
+    roll_no = input("Enter roll number: ")
+    num_subjects = get_positive_int("Enter number of subjects: ")
 
-name = input("Enter student name: ")
-roll_no = input("Enter roll number: ")
-num_subjects = get_positive_int("Enter number of subjects: ")
-
-subjects = []
-total_marks = []
-obtained_marks = []
-percentages = []
-grades = []
-gpas = []
-
-for i in range(num_subjects):
-    print("\nSubject", i+1)
-    sub_name = input("Subject name: ")
-    subjects.append(sub_name)
-    total = get_positive_int("Total marks: ")
-    total_marks.append(total)
-    obtained = get_marks("Obtained marks: ", total)
-    obtained_marks.append(obtained)
-    percent = (obtained/total) * 100
-    percentages.append(percent)
-    grade, gpa = calculate_grade(percent)
-    grades.append(grade)
-    gpas.append(gpa)
-
+    subjects = []
+    total_marks = []
+    obtained_marks = []
+    percentages = []
+    grades = []
+    gpas = []
+    for i in range(num_subjects):
+        print("\nSubject", i+1)
+        sub_name = input("Subject name: ")
+        subjects.append(sub_name)
+        total = get_positive_int("Total marks: ")
+        total_marks.append(total)
+        obtained = get_marks("Obtained marks: ", total)
+        obtained_marks.append(obtained)
+        percent = (obtained/total) * 100
+        percentages.append(percent)
+        grade, gpa = calculate_grade(percent)
+        grades.append(grade)
+        gpas.append(gpa)
+    print("\nSubject          Total      Obtained      Percentage      Grade      GPA")
+    print("===========================================================================");
+    for j in range (num_subjects):
+        print("\n" + subjects[j] + "             " + str(total_marks[j]) + "          " + str(obtained_marks[j]) + "         " + str(round(percentages[j], 2)) + "         " + grades[j] + "      " + str(gpas[j]))
+main()

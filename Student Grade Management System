@@ -80,8 +80,8 @@ def main():
     overall_grade, _ = calculate_grade(overall_percent)
     avg_gpa = sum(gpas) / num_subjects
 
-    print("\nSubject          Total      Obtained      Percentage      Grade      GPA")
-    print("===========================================================================");
+    print("\n{:<15} {:<10} {:<12} {:<12} {:<8} {:<5}".format("Subject", "Total", "Obtained", "Percentage", "Grade", "GPA"))
+    print("===============================================================")
     for j in range (num_subjects):
        print(f"{subjects[j]:<15} {total_marks[j]:<10} {obtained_marks[j]:<12} "f"{percentages[j]:<12.2f} {grades[j]:<8} {gpas[j]:<5}")
 
